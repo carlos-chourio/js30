@@ -1,0 +1,42 @@
+body {
+   background : url('Lighthouse.jpg') repeat-x;
+   background-size: cover;
+}
+
+.key-container {
+    display:flex;
+    background:gainsboro;
+    width: 100%;
+    align-items:center;
+    justify-content: center;
+    margin:5px;
+    padding: 5%;
+} 
+
+.key {
+    background-color: blue;
+    transition: all 0.08s;
+    border:4px solid black;
+    margin:10px;
+    display: inline-block;
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.gray {
+    background-color: gainsboro;
+}
+
+.red-text {
+    color:red;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
+
+.block {
+    height: 100px;
+}
