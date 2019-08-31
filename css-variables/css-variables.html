@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<header>
+    <link rel="stylesheet" href="css-variables.css">
+    </link>
+    <link href="https://fonts.googleapis.com/css?family=Livvic|Montserrat&display=swap" rel="stylesheet">
+</header>
+
+<body>
+    <h2 class="center">CSS Variables using <span class="font-color margin-left">JavaScript</span></h2>
+    <form class="controls">
+        <div class="form-group">
+            <label for="spacing">Spacing</label>
+            <input type="range" name="spacing" min="5" max="200" value="5" data-sizing="px">
+            <span id="spacing-value" class="margin-left text-small text-value">5</span>
+        </div>
+        <div class="form-group">
+            <label for="blur">Blur</label>
+            <input type="range" name="blur" min="0" max="25" value="5" data-sizing="px">
+            <span id="blur-value" class="margin-left text-small text-value">5</span>
+        </div>
+        <div class="form-group">
+            <label for="color">Color</label>
+            <input type="color" name="color" value="#f0ff00">
+        </div>
+    </form>
+    <div class="image-container">
+        <!-- <div class="image-background big-image"> -->
+            <img class="image-background big-image responsive-image" src="computer.jpg">
+        <!-- </div> -->
+    </div>
+    <script src="css-variables.js"></script>
+</body>
+
+</html>
