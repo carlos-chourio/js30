@@ -36,13 +36,47 @@ console.table(ordered);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
-let years = inventors.reduce((a,b)=> (a.passed - a.year) + (b.passed - b.year));
+let years = inventors.reduce((a, b) => (a.passed - a.year) + (b.passed - b.year));
 console.log(years);
+
 // 5. Sort the inventors by years lived
+let sortedByYears = inventors.sort((a, b) => (b.passed - b.year) - (a.passed - a.year))
+console.table(sortedByYears);
+
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+// const as = document.querySelectorAll('.mw-category a');
+// const asArray = [...as];
+// const mappedArray = asArray.map(t=> t.textContent);
+// const filtered = mappedArray.filter(t=> t.includes('de'));
+
+// 6.5. (mine) Create a list of inventor full names that contain i in their first name
+const names = inventors.map(t => `${t.first}, ${t.last}`);
+const filtered = names.filter(t => {
+    let [firstName] = t.split(', ');
+    return firstName.includes('i');
+})
+console.table(filtered);
+
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+const sortedByLastName = people.sort((a,b)=> {
+    const [aLastName] = a.split(', ');
+    const [bLastName] = b.split(', ');
+    return (bLastName<aLastName) ? 1 : -1;
+});
+
+console.table(sortedByLastName);
+
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+const result = data.reduce((items,current) => {
+    if (!items[current]) {
+        items[current]=1;
+    } else {
+        items[current]++;
+    }
+    return items;
+}, {} );
+console.table(result);
