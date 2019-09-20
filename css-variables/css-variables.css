@@ -4,6 +4,10 @@
     --blur:5px;
 }
 
+html {
+    box-sizing: border-box;
+}
+
 body {
     font-size: 24pt;
     color:white;
